@@ -1,0 +1,175 @@
+:root {
+  --bg: #08060d;
+  --card-bg: #08060d;
+  --card-alt-bg: #181326;
+  --border: #2d263d;
+  --accent: #c084fc;
+  --accent-strong: #9333ea;
+  --text: #f8fafc;
+  --text-muted: #807a93;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'EB Garamond', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-heading h2 {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.caption {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-style: normal;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.embed-wrap {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.embed-wrap--bandcamp iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.embed-wrap--video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.embed-wrap--video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.social-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-section .caption {
+  color: var(--text-muted);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.social-btn:hover,
+.social-btn:focus-visible {
+  border-color: var(--accent);
+  background: var(--card-alt-bg);
+  color: var(--text);
+}
+
+.social-btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Larger viewports: give the page a bit more breathing room, still capped for readability */
+@media (min-width: 600px) {
+  .page {
+    max-width: 560px;
+    padding: 96px 32px;
+  }
+
+  .card-heading h2 {
+    font-size: 28px;
+  }
+
+  .social-btn {
+    padding: 24px 36px;
+  }
+}
