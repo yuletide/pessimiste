@@ -132,8 +132,10 @@ h2 {
 }
 
 .social-links {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
 }
 
 .social-btn {
@@ -141,7 +143,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 20px 28px;
+  padding: 20px 8px;
+  text-align: center;
   border: 1px solid var(--border);
   border-radius: 12px;
   color: var(--text-muted);
@@ -178,7 +181,11 @@ h2 {
     font-size: 28px;
   }
 
+  .social-links {
+    gap: 20px;
+  }
+
   .social-btn {
-    padding: 24px 36px;
+    padding: 24px 12px;
   }
 }
