@@ -169,13 +169,13 @@ h2 {
 /* Larger viewports: give the page a bit more breathing room, still capped for readability */
 @media (min-width: 600px) {
   .page {
-    max-width: 560px;
-    padding: 96px 32px;
+    max-width: 500px;
+    padding: 42px 32px;
     gap: 52px;
   }
 
   .logo {
-    max-width: 420px; /* nice */
+    max-width: 520px; /* nice */
   }
   .card-heading h2 {
     font-size: 28px;
