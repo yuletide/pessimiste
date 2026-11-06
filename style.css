@@ -70,6 +70,10 @@ h2 {
   background: var(--card-bg);
 }
 
+.card#featured-video {
+  margin-top: -48px;
+}
+
 .card-heading {
   display: flex;
   flex-direction: column;
